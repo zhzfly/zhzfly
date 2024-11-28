@@ -1,0 +1,494 @@
+/* 导航s */
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	transition: all .3s;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.nav-bar>li {
+	position: relative;
+	width: 20%;
+	float: left;
+}
+
+.nav-bar a {
+	color: #fff;
+	font-size: 14px;
+}
+
+.nav-bar a .local_hd {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	display: block;
+}
+
+.nav-bar a .local_bd {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	display: block;
+}
+
+.nav-bar>li::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: rgb(255, 60, 141);
+	/* 缩放 */
+	transform: scaleX(0);
+	transition: all .4s;
+}
+
+.nav-bar>li:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-bar>li:hover::after {
+	transform: scaleX(1);
+}
+
+/* 导航e */
+
+/*banner样式开始*/
+.banner {
+	position: relative;
+	width: 100%;
+	height: 1080px;
+	background: #080325 url("../img/banner_bg.jpg") no-repeat center top;
+}
+
+/*球*/
+.earth {
+	width: 200px;
+	height: 200px;
+	z-index: 800;
+	position: absolute;
+	top: 450px;
+	right: 150px;
+	animation: rotate1 40s linear infinite;
+}
+
+
+/*定义动画*/
+@keyframes rotate1 {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+/*网*/
+.net-box {
+	position: relative;
+	width: 100%;
+	height: 1080px;
+}
+
+.net1,
+.net2 {
+	position: absolute;
+	top: 228px;
+	background: url("../img/spr_bannerPathway.png") no-repeat;
+}
+
+.net1 {
+	left: -10px;
+	width: 910px;
+	height: 514px;
+	background-position: -925px -2510px;
+}
+
+.net2 {
+	right: 10px;
+	width: 920px;
+	height: 515px;
+	background-position: 0 -2510px;
+}
+
+/*banner样式结束*/
+/* 个人信息s */
+.main {
+	width: 100%;
+	position: absolute;
+	top: 70px;
+	z-index: 999;
+}
+
+.main_fl {
+	width: 300px;
+	float: left;
+	height: 600px;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+}
+
+
+
+.myPhoto {
+	width: 100%;
+	padding: 20px 0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: rgb(0, 0, 0, .1);
+}
+
+.myPhoto img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	animation: rotateimg 10s linear infinite;
+}
+
+@keyframes rotateimg {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	33.3% {
+		transform: rotate(90deg);
+	}
+
+	66.6% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(-90deg);
+	}
+}
+
+.myPhoto h3,
+p {
+	color: #fff;
+	margin-top: 5px;
+}
+
+.main_info {
+	margin-top: 50px;
+}
+
+.main_info li {
+	width: 100%;
+	height: 50px;
+	margin-top: 20px;
+}
+
+.main_info li i {
+	font-size: 28px;
+	float: left;
+	margin: 10px;
+	color: #fff;
+}
+
+.main_info li span {
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	color: #fff;
+
+}
+
+.main_info li:hover {
+	width: 100%;
+	height: 50px;
+	background-color: rgba(255, 255, 255, 0.3);
+	animation: rotate2 .5s linear;
+}
+
+@keyframes rotate2 {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(180deg);
+	}
+}
+
+.weixin {
+	width: 100px;
+	height: 100px;
+	margin-top: 50px;
+}
+
+.main_fr {
+	width: 850px;
+	float: right;
+	/* height: 600px; */
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.youshi {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.labe {
+	width: 100px;
+	height: 0;
+	text-align: center;
+	line-height: 30px;
+	border-bottom: 30px solid rgba(255, 255, 255, 0.3);
+	border-right: 30px solid transparent;
+	position: relative;
+	animation: mymove 5s infinite;
+	-webkit-animation: mymove 5s infinite;
+	/*Safari and Chrome*/
+}
+
+.youshi li {
+	width: 100%;
+	/* height: 30px; */
+	line-height: 30px;
+	float: left;
+	text-align: left;
+	animation: fadeInDown 1s;
+	-webkit-animation: fadeInDown 1s;
+	color: #fff;
+}
+
+
+
+@keyframes fadeInDown {
+	0% {
+		margin-top: -200px;
+		opacity: 0;
+	}
+
+	100% {
+		margin-top: 0px;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeInDown {
+	0% {
+		margin-top: -200px;
+		opacity: 0;
+	}
+
+	100% {
+		margin-top: 0px;
+		opacity: 1;
+	}
+}
+
+
+@keyframes mymove {
+	0% {
+		left: 0px;
+	}
+
+	50% {
+		left: 10px;
+	}
+
+	100% {
+		left: 0px;
+	}
+}
+
+@-webkit-keyframes mymove {
+
+	/*Safari and Chrome*/
+	0% {
+		left: 0px;
+	}
+
+	50% {
+		left: 10px;
+	}
+
+	100% {
+		left: 0px;
+	}
+}
+
+/* 个人信息e */
+
+/* 主体s */
+.content {
+	position: relative;
+	z-index: 666;
+	width: 100%;
+	background-color: #080325;
+	overflow: hidden;
+}
+
+/* 产品开始s */
+.product {
+	width: 100%;
+	height: 498px;
+}
+
+.wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.product-top {
+	width: 100%;
+	height: 390px;
+}
+
+.product-top>div {
+	width: 48.5333%;
+	height: 100%;
+	float: left;
+	border-radius: 20px;
+	font-size: 24px;
+	color: #fefefe;
+	background-image: url("../img/product01.jpg");
+}
+
+.product-top>div:last-child {
+	float: right;
+	background-image: url("../img/product03.jpg");
+}
+
+.product-img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin-top: 50px;
+}
+
+.product-desc {
+	margin-top: 30px;
+}
+
+.product-label {
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+/* 产品e */
+.module {
+	width: 100%;
+	height: auto;
+	color: #fff;
+	float: left;
+	padding: 50px 0px;
+	background-color: #080325;
+	overflow: hidden;
+}
+
+.home-tit {
+	font-size: 44px;
+	font-weight: lighter;
+}
+
+.home-info {
+	font-size: 22px;
+	font-weight: lighter;
+	margin-top: 30px;
+	color: #fff;
+}
+
+.home-box {
+	width: 100%;
+	height: 500px;
+	/* background: url("../img/onething.jpg") center; */
+	margin-top: 52px;
+	float: left;
+}
+
+.home-box li {
+	width: 392px;
+	height: 400px;
+	background-color: rgba(46, 56, 223, .4);
+	float: left;
+	border-radius: 20px;
+	margin-top: 50px;
+}
+
+.home-box li:hover {
+	background-color: rgba(49, 59, 232, .7);
+}
+
+.home-box li:nth-child(2) {
+	margin: 50px 12px;
+}
+
+.home-box a {
+	color: #fefefe;
+	display: block;
+}
+
+.home-box h4 {
+	margin-top: 100px;
+	font-size: 28px;
+	font-weight: lighter;
+	transition: all .5s;
+}
+
+.home-box p {
+	font-size: 18px;
+	margin-top: 18px;
+	transition: all .5s;
+}
+
+.home-img {
+	width: 158px;
+	height: 158px;
+	margin: 0px 117px;
+	/* background: url("../img/spr_bannerTab.png"); */
+	/* background-position: -330px -95px; */
+	transition: all .5s;
+}
+
+.home-btn {
+	width: 165px;
+	height: 46px;
+	line-height: 46px;
+	border-radius: 24px;
+	font-size: 16px;
+	opacity: 0;
+	transition: all .5s;
+}
+
+/*往上移动*/
+.home-box li:hover h4 {
+	transform: translateY(-28px);
+}
+
+.home-box li:hover p {
+	transform: translateY(-20px);
+	opacity: 0;
+}
+
+.home-box li:hover .home-img {
+	transform: translateY(-76px);
+}
+
+.home-box li:hover .home-btn {
+	transform: translateY(-94px);
+	opacity: 1;
+}
+
+/* 中间e */

@@ -1,0 +1,35 @@
+/* 按钮样式s */
+.btn{
+	position: relative;
+	display: block;
+	width: 232px;
+	height: 64px;
+	border: 1px solid #fff;
+	background-color: rgba(26,197,255,.1);
+	margin: 35px auto 0;
+	border-radius: 33px;
+	color: #fff;
+	font-size: 24px;
+	line-height: 64px;
+	overflow: hidden;
+}
+.btn::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.25);
+    border-radius: 33px;
+    /*半路显示*/
+    transform: scaleX(.4);
+    opacity: 0;
+    transition: all .2s;
+}
+/*鼠标悬停到btn上 ::after出来*/
+.btn:hover::after{
+    transform: scaleX(1);
+    opacity: 1;
+}
+/* 按钮样式e */
